@@ -159,8 +159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -100, y: 31}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -70, y: 30}
+  m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &15418009
 MonoBehaviour:
@@ -648,7 +648,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80, y: -15}
+  m_AnchoredPosition: {x: 100, y: -30}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &505566017
@@ -988,6 +988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: {fileID: 505566017}
   dialogueText: {fileID: 1455974698}
+  auto: {fileID: 15418009}
   textFile: {fileID: 4900000, guid: 46d8d35ede70ab84181a6978bf741355, type: 3}
   index: 0
 --- !u!1 &1455974696
@@ -1022,10 +1023,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 849845508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 416.5, y: -30.5}
-  m_SizeDelta: {x: 833, y: 91}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 456, y: -92.875}
+  m_SizeDelta: {x: 872, y: 92.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1455974698
 MonoBehaviour:
