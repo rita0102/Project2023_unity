@@ -241,7 +241,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b89cc0093057114c8b0717d4d7c9307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog: {fileID: 0}
+  dialog: {fileID: 1241376289}
+  LogText: {fileID: 0}
+  textFile: {fileID: 0}
+  logindex: 0
 --- !u!1 &339332491
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,7 +754,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -15}
+  m_AnchoredPosition: {x: 9, y: -18}
   m_SizeDelta: {x: -100, y: -130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1241376285
@@ -849,11 +852,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: {fileID: 0}
   dialogueText: {fileID: 0}
-  LogText: {fileID: 1520785559}
   textFile: {fileID: 4900000, guid: 4075765c644ebc24684c6272b2b14b76, type: 3}
   index: 0
-  logindex: 0
   a: 0
+  logC: {fileID: 0}
   textList: []
 --- !u!114 &1241376290
 MonoBehaviour:
@@ -867,7 +869,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b89cc0093057114c8b0717d4d7c9307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog: {fileID: 0}
+  dialog: {fileID: 1241376289}
+  LogText: {fileID: 1520785559}
+  textFile: {fileID: 4900000, guid: 4075765c644ebc24684c6272b2b14b76, type: 3}
+  logindex: 0
 --- !u!1 &1391283637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,8 +1012,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 389, y: -128}
-  m_SizeDelta: {x: 872, y: 0}
+  m_AnchoredPosition: {x: 382, y: -257.03937}
+  m_SizeDelta: {x: 850, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1520785559
 MonoBehaviour:
@@ -1032,18 +1037,20 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 15
+    m_MaxSize: 20
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '1
+  m_Text: 'new text
+
+    1
 
     2
 
@@ -1271,8 +1278,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1813440591}
   m_HandleRect: {fileID: 1813440590}
   m_Direction: 2
-  m_Value: 0.5000002
-  m_Size: 0.76579845
+  m_Value: 1
+  m_Size: 0.49610955
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

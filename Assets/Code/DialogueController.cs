@@ -55,6 +55,7 @@ public class DialogSystem : MonoBehaviour{
                 //index++;
                 StartCoroutine(SetTextUI());
             }
+            logC.logindex++;
         }
         else if(finish == true && a % 2 == 1)
         {
@@ -67,12 +68,13 @@ public class DialogSystem : MonoBehaviour{
                 //index++;
                 StartCoroutine(SetTextUI());
             }
+            logC.logindex++;
         }
 
        // LogText.text += textList[logindex] + "\n";
     }
 
-    void getTextFromFile(TextAsset file)
+    public void getTextFromFile(TextAsset file)
     {
         textList.Clear();
         index = 0;
