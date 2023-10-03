@@ -18,6 +18,7 @@ public class DialogSystem : MonoBehaviour{
     public int a = 1;
 
     public LogController logC;      //logC.logindex
+    public int logindex = 0;       //´ú¸Õ¥Î
 
     bool finish;
     public List<string> textList = new List<string>();
@@ -55,7 +56,7 @@ public class DialogSystem : MonoBehaviour{
                 //index++;
                 StartCoroutine(SetTextUI());
             }
-            logC.logindex++;
+           // logC.logindex++;
         }
         else if(finish == true && a % 2 == 1)
         {
@@ -68,9 +69,10 @@ public class DialogSystem : MonoBehaviour{
                 //index++;
                 StartCoroutine(SetTextUI());
             }
-            logC.logindex++;
+           // logC.logindex++;
         }
 
+        PlayerPrefs.SetInt("logindex", logindex);
        // LogText.text += textList[logindex] + "\n";
     }
 
@@ -97,8 +99,9 @@ public class DialogSystem : MonoBehaviour{
         }
         index++;
 
-       // logC.logindex++;
-        finish = true;
+        // logC.logindex++;
+        logindex++;
+         finish = true;
     }
 
     public void auto()

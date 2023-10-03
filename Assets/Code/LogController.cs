@@ -20,16 +20,16 @@ public class LogController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //dialog.getTextFromFile(textFile);
+        logindex = PlayerPrefs.GetInt("logindex");
 
         LogText.text = "";
-        LogText.text += logindex + "\n";              //代刚ノ
-        LogText.text += dialog.textList[0] + "\n";     //代刚ノ
-        LogText.text += dialog.textList[1] + "\n";     //代刚ノ
-        LogText.text += dialog.textList[2] + "\n";     //代刚ノ
+        //LogText.text += logindex + "\n";              //代刚ノ
+       // LogText.text += dialog.textList[0] + "\n";     //代刚ノ
+       // LogText.text += dialog.textList[1] + "\n";     //代刚ノ
+       // LogText.text += dialog.textList[2] + "\n";     //代刚ノ
 
 
-        for (int i = 0; i <= logindex; i++)
+        for (int i = 0; i < logindex; i++)
         {
             LogText.text += dialog.textList[i] + "\n";
         }
