@@ -22,7 +22,7 @@ public class ButtonControl : MonoBehaviour
     //切換至Game場景
     public void SwitchSceneGame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(6);
     }
 
     //切換至Menu場景
