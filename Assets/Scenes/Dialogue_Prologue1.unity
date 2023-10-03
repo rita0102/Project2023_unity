@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 15418010}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 849845511}
+        m_TargetAssemblyTypeName: DialogSystem, Assembly-CSharp
+        m_MethodName: auto
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &15418010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -988,9 +1000,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: {fileID: 505566017}
   dialogueText: {fileID: 1455974698}
-  auto: {fileID: 15418009}
+  TextAuto: {fileID: 15418009}
   textFile: {fileID: 4900000, guid: 46d8d35ede70ab84181a6978bf741355, type: 3}
   index: 0
+  a: 0
 --- !u!1 &1455974696
 GameObject:
   m_ObjectHideFlags: 0

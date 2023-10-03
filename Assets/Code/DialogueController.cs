@@ -4,20 +4,19 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Threading;
 
 public class DialogSystem : MonoBehaviour{
     [Header("UI")]
     public Text characterName;
     public Text dialogueText;
-    public Button TextAuto;
 
     [Header("File")]
     public TextAsset textFile;
     public int index;
+    public int a = 1;
 
     bool finish;
-    int a = 0;
-
     List<string> textList = new List<string>();
 
 
@@ -33,30 +32,28 @@ public class DialogSystem : MonoBehaviour{
     }
     void Update()
     {
-        if (a%2 == 0)
+        if (Input.GetKeyDown(KeyCode.Space) && finish == true && a%2 == 0)
         {
-            if (Input.GetButtonDown("Auto"))
+            if (index < textList.Count)
             {
-
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && finish == true)
-        {
-            if(index < textList.Count) {
                 characterName.text = textList[index];
                 index++;
                 //dialogueText.text = textList[index];
                 //index++;
                 StartCoroutine(SetTextUI());
-                
-            }
-            else
-            {
-                characterName.text = dialogueText.text = "";
-                index = 0;
             }
         }
-
+        else if(finish == true && a % 2 == 1)
+        {
+            if(index< textList.Count) {
+                Thread.Sleep(1000);
+                characterName.text = textList[index];
+                index++;
+                //dialogueText.text = textList[index];
+                //index++;
+                StartCoroutine(SetTextUI());
+            }
+        }
     }
     void getTextFromFile(TextAsset file)
     {
@@ -79,14 +76,12 @@ public class DialogSystem : MonoBehaviour{
 
             yield return new WaitForSeconds(0.1f);
         }
-
-
-        finish = true;
         index++;
+        finish = true;
     }
 
     public void auto()
     {
-        a = a++;
+        a = a+1;
     }
 }
