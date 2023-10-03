@@ -10,16 +10,26 @@ public class DialogSystem : MonoBehaviour{
     [Header("UI")]
     public Text characterName;
     public Text dialogueText;
+    public Text LogText;
 
     [Header("File")]
     public TextAsset textFile;
     public int index;
+    public int logindex;
+    public int logindexold;
     public int a = 1;
 
     bool finish;
-    List<string> textList = new List<string>();
+    public List<string> textList = new List<string>();
 
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        LogText.text = "";
+        // LogText.text += textList[logindex] + "\n";
+        //logControl();
+    }
     void Awake()
     {
         getTextFromFile(textFile);
@@ -27,17 +37,22 @@ public class DialogSystem : MonoBehaviour{
     void OnEnable()
     {
         characterName.text = textList[index];
+       
         index++;
         StartCoroutine(SetTextUI());
     }
+
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && finish == true && a%2 == 0)
         {
+
             if (index < textList.Count)
             {
                 characterName.text = textList[index];
                 index++;
+
                 //dialogueText.text = textList[index];
                 //index++;
                 StartCoroutine(SetTextUI());
@@ -49,12 +64,16 @@ public class DialogSystem : MonoBehaviour{
                 Thread.Sleep(1000);
                 characterName.text = textList[index];
                 index++;
+
                 //dialogueText.text = textList[index];
                 //index++;
                 StartCoroutine(SetTextUI());
             }
         }
+
+       // LogText.text += textList[logindex] + "\n";
     }
+
     void getTextFromFile(TextAsset file)
     {
         textList.Clear();
@@ -77,6 +96,8 @@ public class DialogSystem : MonoBehaviour{
             yield return new WaitForSeconds(0.1f);
         }
         index++;
+       
+        logindex++;
         finish = true;
     }
 
@@ -84,4 +105,5 @@ public class DialogSystem : MonoBehaviour{
     {
         a = a+1;
     }
+    
 }

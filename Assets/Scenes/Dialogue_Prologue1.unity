@@ -764,8 +764,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 240efaef7084cf94d8376d45451bd8a3, type: 2}
-  m_sharedMaterial: {fileID: -8848595788253979135, guid: 240efaef7084cf94d8376d45451bd8a3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -919,6 +919,7 @@ GameObject:
   - component: {fileID: 849845510}
   - component: {fileID: 849845509}
   - component: {fileID: 849845511}
+  - component: {fileID: 849845512}
   m_Layer: 5
   m_Name: DialoguePanel
   m_TagString: Untagged
@@ -1000,10 +1001,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: {fileID: 505566017}
   dialogueText: {fileID: 1455974698}
-  TextAuto: {fileID: 15418009}
+  LogText: {fileID: 0}
   textFile: {fileID: 4900000, guid: 46d8d35ede70ab84181a6978bf741355, type: 3}
   index: 0
+  logindex: 0
+  logindexold: 0
   a: 0
+  textList: []
+--- !u!114 &849845512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849845507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b89cc0093057114c8b0717d4d7c9307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog: {fileID: 0}
 --- !u!1 &1455974696
 GameObject:
   m_ObjectHideFlags: 0
