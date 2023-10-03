@@ -10,14 +10,14 @@ public class DialogSystem : MonoBehaviour{
     [Header("UI")]
     public Text characterName;
     public Text dialogueText;
-    public Text LogText;
+    //public Text LogText;
 
     [Header("File")]
     public TextAsset textFile;
     public int index;
-    public int logindex;
-    public int logindexold;
     public int a = 1;
+
+    public LogController logC;      //logC.logindex
 
     bool finish;
     public List<string> textList = new List<string>();
@@ -26,9 +26,7 @@ public class DialogSystem : MonoBehaviour{
     // Start is called before the first frame update
     void Start()
     {
-        LogText.text = "";
-        // LogText.text += textList[logindex] + "\n";
-        //logControl();
+        
     }
     void Awake()
     {
@@ -96,8 +94,8 @@ public class DialogSystem : MonoBehaviour{
             yield return new WaitForSeconds(0.1f);
         }
         index++;
-       
-        logindex++;
+
+       // logC.logindex++;
         finish = true;
     }
 

@@ -11,13 +11,21 @@ public class LogController : MonoBehaviour
 
     public DialogSystem dialog;
 
+    public Text LogText;
+    public TextAsset textFile;
+    public int logindex;
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
-        dialog.LogText.text = "";
-        for (int i = 0; i <= dialog.logindex; i++)
+        LogText.text = "";
+        logindex = 0;
+        
+        for (int i = 0; i <= logindex; i++)
         {
-            dialog.LogText.text += dialog.textList[dialog.logindex] + "\n";
+            LogText.text += dialog.textList[logindex] + "\n";
         }
     }
 
