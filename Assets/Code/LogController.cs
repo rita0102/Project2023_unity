@@ -15,6 +15,7 @@ public class LogController : MonoBehaviour
     public TextAsset textFile;
     public int logindex = 0;
 
+    //ด๚ธี
     
 
     // Start is called before the first frame update
