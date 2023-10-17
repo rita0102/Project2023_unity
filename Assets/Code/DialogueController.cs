@@ -18,7 +18,9 @@ public class DialogSystem : MonoBehaviour{
     public int a = 1;
 
    // public LogController logC;      //logC.logindex
-    public int logindex = 0;       
+    public int logindex = 0;
+
+    //Button AutoBtn;
 
     bool finish;
     public List<string> textList = new List<string>();
