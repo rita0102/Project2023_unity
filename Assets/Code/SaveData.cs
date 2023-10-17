@@ -23,11 +23,20 @@ public class SaveData : MonoBehaviour
     {
         PlayerPrefs.SetString("name",playerData.playerName);
         PlayerPrefs.SetInt("San", playerData.sanity);
+        PlayerPrefs.SetString("Current Scene", playerData.currentScene);
+    }
+
+    public void Load()
+    {
+        PlayerPrefs.GetString("name", playerData.playerName);
+        PlayerPrefs.GetInt("San", playerData.sanity);
+        PlayerPrefs.GetString("Current Scene", playerData.currentScene);
     }
 
     [SerializeField]
     public class PlayerData
     {
+        public string currentScene;
         public string playerName;
         public int sanity;
     }

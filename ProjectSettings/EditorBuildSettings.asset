@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dialogue_Prologue1.unity
     guid: 8877b109246db534696e40a85fe96f16
+  - enabled: 1
+    path: Assets/Scenes/InputPlayerData.unity
+    guid: 729663c4c8a711c41bb683be66986563
   m_configObjects: {}
