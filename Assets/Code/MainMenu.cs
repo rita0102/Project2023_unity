@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class MainMenu : MonoBehaviour
@@ -25,6 +26,8 @@ public class MainMenu : MonoBehaviour
     void NewGame()
     {
         PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("InputPlayerData");
+
     }
 
     void Continue()

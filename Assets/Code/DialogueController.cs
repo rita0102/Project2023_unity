@@ -20,8 +20,6 @@ public class DialogSystem : MonoBehaviour{
    // public LogController logC;      //logC.logindex
     public int logindex = 0;
 
-    //Button AutoBtn;
-
     bool finish;
     public List<string> textList = new List<string>();
 
@@ -34,6 +32,7 @@ public class DialogSystem : MonoBehaviour{
     void Awake()
     {
         getTextFromFile(textFile);
+        
     }
     void OnEnable()
     {
