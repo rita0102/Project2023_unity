@@ -1550,6 +1550,7 @@ MonoBehaviour:
   LogText: {fileID: 766875815}
   textFile: {fileID: 4900000, guid: 4075765c644ebc24684c6272b2b14b76, type: 3}
   logindex: 0
+  oldlogindex: 0
 --- !u!114 &634669275
 MonoBehaviour:
   m_ObjectHideFlags: 0
