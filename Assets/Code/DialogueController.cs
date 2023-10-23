@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Threading;
+using Unity.VisualScripting;
 
 public class DialogSystem : MonoBehaviour{
     [Header("UI")]
@@ -15,14 +16,17 @@ public class DialogSystem : MonoBehaviour{
     [Header("File")]
     public TextAsset textFile;
     public int index;
-    public int a = 1;
+    public bool a = false;
 
-   // public LogController logC;      //logC.logindex
-    public int logindex = 0;
+    
+
+    // public LogController logC;      //logC.logindex
+    public int logIndex = 0;
 
     bool finish;
     public List<string> textList = new List<string>();
 
+    public string playerName;
 
     // Start is called before the first frame update
     void Start()
@@ -32,25 +36,37 @@ public class DialogSystem : MonoBehaviour{
     void Awake()
     {
         getTextFromFile(textFile);
-        
+        playerName = PlayerPrefs.GetString("playerName");
     }
     void OnEnable()
     {
-        characterName.text = textList[index];
-       
+        if (string.Compare(textList[index], "еDид")==1)
+        {
+            characterName.text = playerName;
+        }
+        else
+        {
+            characterName.text = textList[index];
+        }
         index++;
         StartCoroutine(SetTextUI());
     }
 
-
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && finish == true && a%2 == 0)
+        if (Input.GetKeyDown(KeyCode.Space) && finish == true && a)
         {
 
             if (index < textList.Count)
             {
-                characterName.text = textList[index];
+                if (string.Compare(textList[index], "еDид") == 1)
+                {
+                    characterName.text = playerName;
+                }
+                else
+                {
+                    characterName.text = textList[index];
+                }
                 index++;
 
                 //dialogueText.text = textList[index];
@@ -59,11 +75,18 @@ public class DialogSystem : MonoBehaviour{
             }
            // logC.logindex++;
         }
-        else if(finish == true && a % 2 == 1)
+        else if(finish == true && !a)
         {
             if(index< textList.Count) {
                 Thread.Sleep(1000);
-                characterName.text = textList[index];
+                if (string.Compare(textList[index], "еDид") == 1)
+                {
+                    characterName.text = playerName;
+                }
+                else
+                {
+                    characterName.text = textList[index];
+                }
                 index++;
 
                 //dialogueText.text = textList[index];
@@ -73,7 +96,7 @@ public class DialogSystem : MonoBehaviour{
            // logC.logindex++;
         }
 
-        PlayerPrefs.SetInt("logindex", logindex);
+       //PlayerPrefs.SetInt("logindex", logIndex);
        // LogText.text += textList[logindex] + "\n";
     }
 
@@ -101,13 +124,13 @@ public class DialogSystem : MonoBehaviour{
         index++;
 
         // logC.logindex++;
-        logindex++;
+        logIndex++;
          finish = true;
     }
 
-    public void auto()
+    public void Auto()
     {
-        a = a+1;
+        a = !a;
     }
     
 }

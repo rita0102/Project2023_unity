@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class SaveManager : MonoBehaviour
@@ -27,6 +28,7 @@ public class SaveManager : MonoBehaviour
     public void Save()
     {
         PlayerPrefs.SetInt("CurrentScene", SceneManager.GetActiveScene().buildIndex);
+        
     }
 
     public void Load()
