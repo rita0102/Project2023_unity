@@ -62,12 +62,12 @@ Tilemap:
   m_TileMatrixArray:
   - m_RefCount: 1
     m_Data:
-      e00: 1
+      e00: 1.595
       e01: 0
       e02: 0
       e03: 0
       e10: 0
-      e11: 1
+      e11: 1.58
       e12: 0
       e13: 0
       e20: 0
@@ -195,11 +195,11 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6718065555210760269}
   m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 0}
+  m_CellSize: {x: 0.64, y: 0.64, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!114 &738878206586017242
+--- !u!114 &4977431549835055789
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
