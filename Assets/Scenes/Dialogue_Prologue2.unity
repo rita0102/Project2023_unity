@@ -3116,12 +3116,13 @@ MonoBehaviour:
   textFile: {fileID: 4900000, guid: 80e4a7a336372174da40c64e283d8414, type: 3}
   index: 0
   a: 0
-  logindex: 0
+  logIndex: 0
   textList:
   - "\u4E3B\u89D2    \u5947\u602A\uFF0C\u9580\u6253\u4E0D\u958B\u3002\r"
   - "\u4E3B\u89D2    \u9019\u662F\u4EC0\u9EBC\u6771\u897F?\u597D\u50CF\u662F\u500B\u5BC6\u78BC\u9396\u3002\r"
   - "\u4E3B\u89D2    \u6709\u56DB\u500B\u984F\u8272...\u610F\u601D\u662F\u8981\u6211\u627E\u76F8\u540C\u984F\u8272\u7684\u6771\u897F\u55CE?
     \u4F86\u770B\u770B\u623F\u9593\u88E1\u6709\u6C92\u6709\u7DDA\u7D22\u5427!"
+  playerName: 
 --- !u!114 &1296221302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4378,8 +4379,9 @@ MonoBehaviour:
   textFile: {fileID: 4900000, guid: b0f9dfbc543417541b907723f41628ec, type: 3}
   index: 0
   a: 1
-  logindex: 0
+  logIndex: 0
   textList: []
+  playerName: 
 --- !u!114 &1814672744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4503,7 +4505,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1814672743}
         m_TargetAssemblyTypeName: DialogSystem, Assembly-CSharp
-        m_MethodName: auto
+        m_MethodName: Auto
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

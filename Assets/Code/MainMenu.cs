@@ -32,6 +32,8 @@ public class MainMenu : MonoBehaviour
 
     void Continue()
     {
+        int currentScene = PlayerPrefs.GetInt("CurrentScene");
+        SceneManager.LoadScene(currentScene);
     }
 
     void QuitGame()

@@ -208,7 +208,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 849845511}
         m_TargetAssemblyTypeName: DialogSystem, Assembly-CSharp
-        m_MethodName: auto
+        m_MethodName: Auto
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1568,8 +1568,9 @@ MonoBehaviour:
   textFile: {fileID: 4900000, guid: 4075765c644ebc24684c6272b2b14b76, type: 3}
   index: 0
   a: 0
-  logindex: 0
+  logIndex: 0
   textList: []
+  playerName: 
 --- !u!114 &634669276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2324,8 +2325,9 @@ MonoBehaviour:
   textFile: {fileID: 4900000, guid: 46d8d35ede70ab84181a6978bf741355, type: 3}
   index: 0
   a: 0
-  logindex: 0
+  logIndex: 0
   textList: []
+  playerName: 
 --- !u!1 &935056265
 GameObject:
   m_ObjectHideFlags: 0
