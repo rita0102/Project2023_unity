@@ -96,7 +96,7 @@ public class DialogSystem : MonoBehaviour{
            // logC.logindex++;
         }
 
-       //PlayerPrefs.SetInt("logindex", logIndex);
+       PlayerPrefs.SetInt("logindex", logIndex);
        // LogText.text += textList[logindex] + "\n";
     }
 
