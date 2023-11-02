@@ -14,7 +14,10 @@ public class DialogSystem : MonoBehaviour{
     //public Text LogText;
 
     [Header("File")]
-    public TextAsset textFile;
+    public TextAsset textFile1;
+    //public TextAsset textFile2;
+
+    [Header("information")]
     public int index;
     public bool a = false;
 
@@ -35,7 +38,7 @@ public class DialogSystem : MonoBehaviour{
     }
     void Awake()
     {
-        getTextFromFile(textFile);
+        getTextFromFile(textFile1);
         playerName = PlayerPrefs.GetString("playerName");
     }
     void OnEnable()
@@ -132,5 +135,4 @@ public class DialogSystem : MonoBehaviour{
     {
         a = !a;
     }
-    
 }
