@@ -34,6 +34,6 @@ public class SaveManager : MonoBehaviour
     public void Load()
     {
         int currentScene= PlayerPrefs.GetInt("CurrentScene");
-        SceneManager.LoadScene(currentScene);
+        SceneManager.LoadScene(currentScene);    
     }
 }
