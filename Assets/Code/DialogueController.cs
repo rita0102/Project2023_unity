@@ -11,7 +11,7 @@ public class DialogSystem : MonoBehaviour{
     [Header("UI")]
     public Text characterName;
     public Text dialogueText;
-    //public Text LogText;
+
 
     [Header("File")]
     public TextAsset textFile1;
@@ -21,9 +21,7 @@ public class DialogSystem : MonoBehaviour{
     public int index;
     public bool a = false;
 
-    
 
-    // public LogController logC;      //logC.logindex
     public int logIndex = 0;
 
     bool finish;
@@ -72,11 +70,9 @@ public class DialogSystem : MonoBehaviour{
                 }
                 index++;
 
-                //dialogueText.text = textList[index];
-                //index++;
+
                 StartCoroutine(SetTextUI());
             }
-           // logC.logindex++;
         }
         else if(finish == true && !a)
         {
@@ -92,15 +88,12 @@ public class DialogSystem : MonoBehaviour{
                 }
                 index++;
 
-                //dialogueText.text = textList[index];
-                //index++;
+
                 StartCoroutine(SetTextUI());
             }
-           // logC.logindex++;
         }
 
        PlayerPrefs.SetInt("logindex", logIndex);
-       // LogText.text += textList[logindex] + "\n";
     }
 
     public void getTextFromFile(TextAsset file)
@@ -126,7 +119,6 @@ public class DialogSystem : MonoBehaviour{
         }
         index++;
 
-        // logC.logindex++;
         logIndex++;
          finish = true;
     }

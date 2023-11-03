@@ -16,36 +16,48 @@ public class LogController : MonoBehaviour
     public int logindex = 0;
     public int oldlogindex = 0;
 
+    public string playerName;
 
 
     // Start is called before the first frame update
     void Start()
     {
         /*
-        //logindex = PlayerPrefs.GetInt("logindex");
-
-        getLogindex();
-
-        LogText.text = "";
-        //LogText.text += logindex + "\n";              //代刚ノ
-        // LogText.text += dialog.textList[0] + "\n";     //代刚ノ
-        // LogText.text += dialog.textList[1] + "\n";     //代刚ノ
-        // LogText.text += dialog.textList[2] + "\n";     //代刚ノ
-
-        
-        for (int i = 0; i < logindex; i++)
+        if (string.Compare(PlayerPrefs.GetString("playerName"), "") == 1)
         {
-            LogText.text += dialog.textList[i] + "\n";
-        }*/
+            playerName = "à";
+        }
+        else
+        {
+            playerName = PlayerPrefs.GetString("playerName");
+        }
+        */
     }
 
     void OnEnable()
     {
         logindex = PlayerPrefs.GetInt("logindex");
-        LogText.text = "";
-        for (int i = 0; i < logindex; i++)
+
+        if (string.Compare(PlayerPrefs.GetString("playerName"), "") == 1)
         {
-            LogText.text += dialog.textList[i] + "\n";
+            playerName = "à";
+        }
+        else
+        {
+            playerName = PlayerPrefs.GetString("playerName");
+        }
+
+        LogText.text = "";
+        for (int i = 0; i < logindex * 2; i+=2)
+        {
+            if (string.Compare(dialog.textList[i], "à") == 1)
+            {
+                LogText.text += playerName + "\t\t\t" + dialog.textList[i + 1] + "\n";
+            }
+            else
+            {
+                LogText.text += dialog.textList[i] + "\t\t" + dialog.textList[i + 1] + "\n";
+            }
         }
     }
 

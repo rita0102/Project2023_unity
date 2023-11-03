@@ -3094,11 +3094,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b89cc0093057114c8b0717d4d7c9307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog: {fileID: 1296221301}
+  dialog: {fileID: 1814672743}
   LogText: {fileID: 1077432494}
-  textFile: {fileID: 4900000, guid: 80e4a7a336372174da40c64e283d8414, type: 3}
+  textFile: {fileID: 4900000, guid: b0f9dfbc543417541b907723f41628ec, type: 3}
   logindex: 1
   oldlogindex: 0
+  playerName: 
 --- !u!114 &1296221301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3113,7 +3114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: {fileID: 0}
   dialogueText: {fileID: 0}
-  textFile: {fileID: 4900000, guid: 80e4a7a336372174da40c64e283d8414, type: 3}
+  textFile1: {fileID: 0}
   index: 0
   a: 0
   logIndex: 0
@@ -4376,7 +4377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: {fileID: 2102084086}
   dialogueText: {fileID: 1503596148}
-  textFile: {fileID: 4900000, guid: b0f9dfbc543417541b907723f41628ec, type: 3}
+  textFile1: {fileID: 4900000, guid: b0f9dfbc543417541b907723f41628ec, type: 3}
   index: 0
   a: 1
   logIndex: 0

@@ -967,11 +967,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b89cc0093057114c8b0717d4d7c9307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog: {fileID: 451568780}
+  dialog: {fileID: 406488498}
   LogText: {fileID: 1008254842}
-  textFile: {fileID: 4900000, guid: 4075765c644ebc24684c6272b2b14b76, type: 3}
+  textFile: {fileID: 4900000, guid: 8c1539e5f179978498da261ae8de2445, type: 3}
   logindex: 0
   oldlogindex: 0
+  playerName: 
 --- !u!114 &451568780
 MonoBehaviour:
   m_ObjectHideFlags: 0
