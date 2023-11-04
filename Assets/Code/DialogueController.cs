@@ -9,7 +9,7 @@ using Unity.VisualScripting;
 
 public class DialogSystem : MonoBehaviour{
     [Header("UI")]
-    public Text characterName;
+    public Text speaker;
     public Text dialogueText;
 
 
@@ -43,11 +43,11 @@ public class DialogSystem : MonoBehaviour{
     {
         if (string.Compare(textList[index], "еDид")==1)
         {
-            characterName.text = playerName;
+            speaker.text = playerName;
         }
         else
         {
-            characterName.text = textList[index];
+            speaker.text = textList[index];
         }
         index++;
         StartCoroutine(SetTextUI());
@@ -62,11 +62,11 @@ public class DialogSystem : MonoBehaviour{
             {
                 if (string.Compare(textList[index], "еDид") == 1)
                 {
-                    characterName.text = playerName;
+                    speaker.text = playerName;
                 }
                 else
                 {
-                    characterName.text = textList[index];
+                    speaker.text = textList[index];
                 }
                 index++;
 
@@ -80,11 +80,11 @@ public class DialogSystem : MonoBehaviour{
                 Thread.Sleep(1000);
                 if (string.Compare(textList[index], "еDид") == 1)
                 {
-                    characterName.text = playerName;
+                    speaker.text = playerName;
                 }
                 else
                 {
-                    characterName.text = textList[index];
+                    speaker.text = textList[index];
                 }
                 index++;
 
