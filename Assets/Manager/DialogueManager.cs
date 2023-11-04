@@ -51,7 +51,7 @@ public class DialogueManager : MonoBehaviour
     {
         story = new Story(textFile.text);
         if (OnCreateStory != null) OnCreateStory(story);
-        //RefreshView();
+        RefreshView();
     }
 
     // This is the main function called every time the story changes. It does a few things:
@@ -63,7 +63,7 @@ public class DialogueManager : MonoBehaviour
         RemoveChildren();
 
         // Read all the content until we can't continue any more
-        while (story.canContinue)
+        if (story.canContinue)
         {
             // Continue gets the next line of the story
             string text = story.Continue();
@@ -75,7 +75,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         // Display all the choices, if there are any!
-        if (story.currentChoices.Count > 0)
+        else if (story.currentChoices.Count > 0)
         {
             choiceBox.SetActive(true);
             speaker.text = playerName;
@@ -93,7 +93,7 @@ public class DialogueManager : MonoBehaviour
         // If we've read all the content and there's no choices, the story is finished!
         else
         {
-            
+            //dialogue.text = "END";
         }
     }
 
