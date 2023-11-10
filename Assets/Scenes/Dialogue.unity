@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 407900025}
   - component: {fileID: 407900024}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: DialogueSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,10 +156,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textFile: {fileID: 4900000, guid: 15aa20c1b35fcce4aacba5aee639c235, type: 3}
-  choiceBox: {fileID: 1483583172}
+  canvas: {fileID: 407900023}
   dialoguePanel: {fileID: 588912286}
   speaker: {fileID: 1075352730}
   dialogue: {fileID: 1319782182}
+  choiceBox: {fileID: 1483583172}
   buttonPrefab: {fileID: 483190810}
 --- !u!114 &407900025
 MonoBehaviour:
@@ -612,8 +613,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 10, y: 0}
-  m_SizeDelta: {x: -20, y: 200}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -40, y: 200}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &1319782181
 CanvasRenderer:

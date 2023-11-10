@@ -12,16 +12,17 @@ public class DialogueManager : MonoBehaviour
     public TextAsset textFile;
     public Story story=null;
 
+    
     [SerializeField]
-    private GameObject choiceBox = null;
-
-
+    private GameObject canvas;
     [SerializeField]
     private GameObject dialoguePanel;
     [SerializeField]
     private Text speaker;
     [SerializeField]
     private Text dialogue;
+    [SerializeField]
+    private GameObject choiceBox = null;
     // UI Prefabs
     [SerializeField]
     private Button buttonPrefab = null;
@@ -33,6 +34,7 @@ public class DialogueManager : MonoBehaviour
 
     void Awake()
     {
+        canvas.SetActive(true);
         // Remove the default message
         RemoveChildren();
         StartStory();
@@ -93,6 +95,7 @@ public class DialogueManager : MonoBehaviour
         // If we've read all the content and there's no choices, the story is finished!
         else
         {
+            canvas.SetActive(false);
             //dialogue.text = "END";
         }
     }
