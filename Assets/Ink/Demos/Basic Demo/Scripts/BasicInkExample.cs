@@ -81,7 +81,7 @@ public class BasicInkExample : MonoBehaviour {
 		choiceText.text = text;
 
 		// Make the button expand to fit the text
-		HorizontalLayoutGroup layoutGroup = choice.GetComponent <HorizontalLayoutGroup> ();
+		VerticalLayoutGroup layoutGroup = choice.GetComponent <VerticalLayoutGroup> ();
 		layoutGroup.childForceExpandHeight = false;
 
 		return choice;
