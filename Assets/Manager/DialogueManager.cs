@@ -40,6 +40,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
+        playerName= PlayerPrefs.GetString("playerName");
         RemoveChoice();
         story = new Story(textFile.text);
         if (OnCreateStory != null) OnCreateStory(story);
@@ -76,7 +77,6 @@ public class DialogueManager : MonoBehaviour
             // This removes any white space from the text.
             dialogueText = dialogueText.Trim();
             // Display the text on screen!
-            //dialogue.text = dialogueText;
             StartCoroutine(SetTextUI());
         }
 
@@ -95,6 +95,7 @@ public class DialogueManager : MonoBehaviour
     private void SetChoice()
     {
         choiceBox.SetActive(true);
+        speaker.text = playerName;
         dialogue.text = "";
         for (int i=0;i< story.currentChoices.Count; i++)
         {
