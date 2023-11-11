@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Ink.Runtime;
-using System.Reflection;
 using System.Threading;
-using Unity.VisualScripting;
+using System.Reflection;
+
 
 public class DialogueManager : MonoBehaviour
 {
@@ -40,15 +40,12 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
-        playerName= PlayerPrefs.GetString("playerName");
+        //playerName= PlayerPrefs.GetString("playerName");
+        playerName = "AAA";
         RemoveChoice();
         story = new Story(textFile.text);
         if (OnCreateStory != null) OnCreateStory(story);
         RefreshView();
-    }
-    void OnEnable()
-    {
-        
     }
 
     private void Update()
@@ -78,6 +75,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText = dialogueText.Trim();
             // Display the text on screen!
             StartCoroutine(SetTextUI());
+            HandleTags(story.currentTags);
         }
 
         // Display all the choices, if there are any!
@@ -120,6 +118,36 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    private void HandleTags(List<string> tags)
+    {
+        foreach(string tag in tags)
+        {
+            string[] splitTag = tag.Split(':');
+            string tagKey = splitTag[0].Trim();
+            string tagValue = splitTag[1].Trim();
+
+            switch (tagKey)
+            {
+                case "speaker":
+                    if (string.Compare(tagValue, "A") == 0)
+                    {
+                        speaker.text = playerName;
+                    }
+                    else
+                    {
+                        speaker.text = tagValue;
+                    }
+                    break;
+                case "expression":
+                    break;
+                case "size":
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
     IEnumerator SetTextUI()
     {
         sentencefisish = false;
@@ -132,6 +160,7 @@ public class DialogueManager : MonoBehaviour
         }
         sentencefisish = true;
     }
+
     public void Auto()
     {
         auto = !auto;

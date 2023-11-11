@@ -601,8 +601,8 @@ MonoBehaviour:
   dialoguePanel: {fileID: 889558065}
   bookText: {fileID: 1222564231}
   choiceButton:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 388698482}
+  - {fileID: 1622341336}
 --- !u!1 &1222564228
 GameObject:
   m_ObjectHideFlags: 0
