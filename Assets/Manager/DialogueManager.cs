@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using Ink.Runtime;
 using System.Threading;
 using System.Reflection;
+using Unity.Collections;
 
 
 public class DialogueManager : MonoBehaviour
@@ -26,8 +27,6 @@ public class DialogueManager : MonoBehaviour
     private Button[] choiceButton;
 
     private Story story = null;
-    private List<string> tags;
-    private Text speakerTag;
 
     // This is a super bare bones example of how to play and display a ink story in Unity.
 
@@ -66,6 +65,8 @@ public class DialogueManager : MonoBehaviour
     {
         // Remove all the choice on screen
         RemoveChoice();
+        //initialize
+        dialogue.fontSize = 32;
         // Read all the content until we can't continue any more
         if (story.canContinue)
         {
@@ -141,6 +142,7 @@ public class DialogueManager : MonoBehaviour
                 case "expression":
                     break;
                 case "size":
+                    dialogue.fontSize= int.Parse(tagValue);
                     break;
                 default:
                     break;
