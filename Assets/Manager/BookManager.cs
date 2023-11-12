@@ -8,81 +8,74 @@ using System.Reflection;
 using System.Threading;
 using Unity.VisualScripting;
 
+
 public class BookManager : MonoBehaviour
 {
     [SerializeField]
-    public TextAsset textFile;
+    private GameObject bookSystem;
     [SerializeField]
-    private GameObject dialogueSystem;
+    private GameObject bookPanel;
     [SerializeField]
-    private GameObject dialoguePanel;
+    private Image bookImage;
     [SerializeField]
-    private Text bookText;
+    private Sprite[] bookSprite;
     [SerializeField]
-    private Button[] choiceButton;
+    private Button nextButton;
+    [SerializeField]
+    private Button prevButton;
 
-    private Story story = null;
-
-    // This is a super bare bones example of how to play and display a ink story in Unity.
-
-    string fileText;
-
-    public static event Action<Story> OnCreateStory;
+    private int index;
 
     private void Awake()
     {
-        story = new Story(textFile.text);
-        if (OnCreateStory != null) OnCreateStory(story);
-        RefreshView();
+        index = 0;
+        bookSystem.SetActive(true);
+        showBook();
+    }
+    private void Update()
+    {
+        showBook();
     }
 
-    void RefreshView()
+    private void showBook()
     {
-        bookText.text = "";
-        RemoveChoice();
-        // Read all the content until we can't continue any more
-        
-            while (story.canContinue)
-            {
-                // Continue gets the next line of the story
-                fileText = story.Continue();
-                // This removes any white space from the text.
-                // Display the text on screen!
-                bookText.text = bookText.text + fileText;
-            }
-        
-        // Display all the choices, if there are any!
-        if (story.currentChoices.Count > 0)
+        prevButton.gameObject.SetActive(true);
+        nextButton.GetComponentInChildren<Text>().text = "下一頁";
+        prevButton.GetComponentInChildren<Text>().text = "上一頁";
+        if (index == 0)
         {
-            SetChoice();
+            prevButton.gameObject.SetActive(false);
+            bookImage.sprite = bookSprite[index];
         }
-        // If we've read all the content and there's no choices, the story is finished!
+
+        else if(index==bookSprite.Length-1)
+        {
+            nextButton.GetComponentInChildren<Text>().text = "結束閱讀";
+            bookImage.sprite = bookSprite[index];
+        }
+
+        else if(index>= bookSprite.Length)
+        {
+            bookSystem.SetActive(false);
+        }
+
         else
         {
-            dialogueSystem.SetActive(false);
+            prevButton.gameObject.SetActive(true);
+            nextButton.GetComponentInChildren<Text>().text = "下一頁";
+            prevButton.GetComponentInChildren<Text>().text = "上一頁";
+            bookImage.sprite = bookSprite[index];
         }
+
+            
     }
 
-    private void SetChoice()
+    public void Next()
     {
-        for (int i = 0; i < story.currentChoices.Count; i++)
-        {
-            choiceButton[i].gameObject.SetActive(true);
-            choiceButton[i].GetComponentInChildren<Text>().text = story.currentChoices[i].text;
-        }
+        index++;
     }
-
-    void RemoveChoice()
+    public void Prev()
     {
-        for (int i = 0; i < choiceButton.Length; i++)
-        {
-            choiceButton[i].gameObject.SetActive(false);
-        }
-    }
-
-    public void MakeChoice(int index)
-    {
-        story.ChooseChoiceIndex(index);
-        RefreshView();
+        index--;
     }
 }
