@@ -25,6 +25,11 @@ public class DialogueManager : MonoBehaviour
     private GameObject choiceBox;
     [SerializeField]
     private Button[] choiceButton;
+    [SerializeField]
+    private Animator character1;
+    [SerializeField]
+    private Animator character2;
+
 
     private Story story = null;
 
@@ -39,8 +44,8 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
-        //playerName= PlayerPrefs.GetString("playerName");
-        playerName = "AAA";
+        playerName= PlayerPrefs.GetString("playerName");
+        //playerName = "AAA";
         RemoveChoice();
         story = new Story(textFile.text);
         if (OnCreateStory != null) OnCreateStory(story);
@@ -130,9 +135,10 @@ public class DialogueManager : MonoBehaviour
             switch (tagKey)
             {
                 case "speaker":
-                    if (string.Compare(tagValue, "A") == 0)
+                    if (tagValue.CompareTo("A") == 0)
                     {
                         speaker.text = playerName;
+                        character1.Play("A_normal");
                     }
                     else
                     {
@@ -140,6 +146,15 @@ public class DialogueManager : MonoBehaviour
                     }
                     break;
                 case "expression":
+                    if (tagValue.Contains("A")==true)
+                    {
+                        character1.Play(tagValue);
+                    }
+                    else
+                    {
+                        character2.Play(tagValue);
+                    }
+
                     break;
                 case "size":
                     dialogue.fontSize= int.Parse(tagValue);
