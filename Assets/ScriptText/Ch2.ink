@@ -1,29 +1,29 @@
-謝謝你剛才的幫助！請問我該如何稱呼您呢? #speaker:A #expression:happy
-你可以叫我鳥嘴醫生。不用客氣，幫助眾人是我作為醫生應該做的事情。 #speaker:鳥嘴醫生 #expression:happy
-為甚麼你會獨自一人在村子裡徘徊呢？ #speaker:鳥嘴醫生
-如你所見，因為疫情肆虐，村子已經沒有人居住了。 #speaker:鳥嘴醫生
+謝謝你剛才的幫助！請問我該如何稱呼您呢? #speaker:A #expression:A_happy
+你可以叫我鳥嘴醫生。不用客氣，幫助眾人是我作為醫生應該做的事情。 #speaker:鳥嘴醫生 #expression:鳥嘴醫生
+為甚麼你會獨自一人在村子裡徘徊呢？ #speaker:鳥嘴醫生 #expression:鳥嘴醫生
+如你所見，因為疫情肆虐，村子已經沒有人居住了。 #speaker:鳥嘴醫生 #expression:鳥嘴醫生
 我是為了尋找解救村民的辦法而調查這個村子的。 #speaker:A
-看來你找到了一些線索，我也正為了治療這種疾病而調查這個村莊。你有發現甚麼特別的線索嗎？ #speaker:鳥嘴醫生
+看來你找到了一些線索，我也正為了治療這種疾病而調查這個村莊。你有發現甚麼特別的線索嗎？ #speaker:鳥嘴醫生 #expression:鳥嘴醫生
 *告訴他藥草的事 #speaker:A
-    我也正在尋找這特殊的藥草，只要有了它，就可以製作出治療病毒的解藥 #speaker:鳥嘴醫生 #expression:happy
+    我也正在尋找這特殊的藥草，只要有了它，就可以製作出治療病毒的解藥 #speaker:鳥嘴醫生 #expression:鳥嘴醫生
     你願意把藥草給我嗎？ #speaker:鳥嘴醫生
     **給他藥草 #speaker:A
-        謝謝！如果你還有找到其他藥草的話也可以拿給我，我一定會努力做出解藥的！ #speaker:鳥嘴醫生 #expression:happy
+        謝謝！如果你還有找到其他藥草的話也可以拿給我，我一定會努力做出解藥的！ #speaker:鳥嘴醫生 #expression:鳥嘴醫生
     **不給 #speaker:A
         好吧.....雖然我也不知道你拿著藥草要幹嘛，但我尊重你的決定，只是我是真的很需要這棵藥草。 #speaker:鳥嘴醫生 #expression:sad
 *沒有 #speaker:A
-    真是可惜... #speaker:鳥嘴醫生 #expression:sad
+    真是可惜... #speaker:鳥嘴醫生 #expression:鳥嘴醫生
     
 -
-我想前往附近的城鎮，打聽一些情報。 #speaker:鳥嘴醫生
+我想前往附近的城鎮，打聽一些情報。 #speaker:鳥嘴醫生 #expression:鳥嘴醫生
 那這一路上我可以跟你一起同行嗎? #speaker:A
-沒問題，那就走吧 ! #speaker:鳥嘴醫生 
+沒問題，那就走吧 ! #speaker:鳥嘴醫生 #expression:鳥嘴醫生
 
 
-那我還有事要處理，我們就在這裡告別吧! #speaker:鳥嘴醫生
+那我還有事要處理，我們就在這裡告別吧! #speaker:鳥嘴醫生 #expression:鳥嘴醫生
 那我就來打聽一下藥草的情報吧! #speaker:A
 
-ㄟ?那邊好像發生什麼事了，去看看吧。 #speaker:A #expression:confused
+ㄟ?那邊好像發生什麼事了，去看看吧。 #speaker:A #expression:A_confused
 真的很謝謝你! 對了，你知道這個城鎮現在在舉行慶典，你有空可以去看看。聽說獎品好像很豐富。 #speaker:居民 #expression:happy
 
 那邊有人在爭吵，去看看吧。 #speaker:A
