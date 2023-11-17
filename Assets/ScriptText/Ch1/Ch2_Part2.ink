@@ -1,10 +1,11 @@
 ->Part2
 === Part2 ===
-！！！！！！#speaker:A #surprise
-怎麼會有狼？#speaker:A #surprise
+#layout:Middle
+！！！！！！#speaker:A #expression:A_surprise
+怎麼會有狼？#speaker:A #expression:A_surprise
+#layout:default
+小心！#speaker:？？？ #expression:鳥嘴醫生
+你沒事吧？有沒有受傷？#speaker:？？？ #expression:鳥嘴醫生
 
-小心！#speaker:？？？
-你沒事吧？有沒有受傷？#speaker:？？？
-
-沒事！謝謝你救了我！#speaker:A #happy
+沒事！謝謝你救了我！#speaker:A #expression:A_happy
 ->END

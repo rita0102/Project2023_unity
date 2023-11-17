@@ -26,9 +26,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private Button[] choiceButton;
     [SerializeField]
-    private Animator character1;
+    private Image character1;
     [SerializeField]
-    private Animator character2;
+    private Image character2;
 
 
     private Story story = null;
@@ -39,12 +39,19 @@ public class DialogueManager : MonoBehaviour
     private string playerName;
     string dialogueText;
     private bool sentencefisish;
+    private Animator char1Animator;
+    private Animator char2Animator;
+    //private Animator layoutAnimator;
 
     public static event Action<Story> OnCreateStory;
 
     private void Awake()
     {
-        playerName= PlayerPrefs.GetString("playerName");
+        char1Animator=character1.GetComponent<Animator>();
+        char2Animator = character2.GetComponent<Animator>();
+        character1.gameObject.transform.localPosition = new Vector2(-260, -20);
+        character2.gameObject.SetActive(true);
+        playerName = PlayerPrefs.GetString("playerName");
         //playerName = "AAA";
         RemoveChoice();
         story = new Story(textFile.text);
@@ -138,26 +145,39 @@ public class DialogueManager : MonoBehaviour
                     if (tagValue.CompareTo("A") == 0)
                     {
                         speaker.text = playerName;
-                        character1.Play("A_normal");
+                        char1Animator.Play("A_normal");
                     }
                     else
                     {
                         speaker.text = tagValue;
                     }
                     break;
+                case "size":
+                    dialogue.fontSize = int.Parse(tagValue);
+                    break;
                 case "expression":
                     if (tagValue.Contains("A")==true)
                     {
-                        character1.Play(tagValue);
+                        char1Animator.Play(tagValue);
                     }
                     else
                     {
-                        character2.Play(tagValue);
+                        char2Animator.Play(tagValue);
                     }
-
                     break;
-                case "size":
-                    dialogue.fontSize= int.Parse(tagValue);
+                case "layout":
+                    if (tagValue.CompareTo("Middle") == 0)
+                    {
+                        speaker.text = playerName;
+                        character1.gameObject.transform.localPosition = new Vector2(0, -20);
+                        character2.gameObject.SetActive(false);
+
+                    }
+                    else
+                    {
+                        character1.gameObject.transform.position = new Vector2(-260, -20);
+                        character2.gameObject.SetActive(true);
+                    }
                     break;
                 default:
                     break;

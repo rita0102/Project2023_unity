@@ -60,6 +60,7 @@ VAR choice=0
 *->
 - 好~了~♬ 問題應該問完了吧，接下來你就自己好好加油吧♪  #speaker:吹笛人 #expression:吹笛人_A
 
+    
 【想知道真相，就到城堡裡來】 #speaker:紙條
 ->DONE
 

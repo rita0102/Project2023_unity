@@ -1,1 +1,1 @@
-﻿{"inkVersion":21,"root":[[{"->":"Part1"},["done",{"#f":5,"#n":"g-0"}],null],"done",{"Part1":["^怎麼回事？村民都到哪裡了？","#","^speaker:A ","/#","#","^expression:A_confused","/#","\n","^先在村子看看有甚麼線索吧！","#","^speaker:A","/#","\n","end",{"#f":1}],"#f":1}],"listDefs":{}}
+﻿{"inkVersion":21,"root":[[{"->":"Part1"},["done",{"#f":5,"#n":"g-0"}],null],"done",{"Part1":["#","^layout:Middle","/#","^怎麼回事？村民都到哪裡了？","#","^speaker:A ","/#","#","^expression:A_confused","/#","\n","^先在村子看看有甚麼線索吧！","#","^speaker:A ","/#","#","^expression:A_normal","/#","\n","end",{"#f":1}],"#f":1}],"listDefs":{}}
