@@ -49,11 +49,11 @@ public class DialogueManager : MonoBehaviour
     {
         char1Animator=character1.GetComponent<Animator>();
         char2Animator = character2.GetComponent<Animator>();
-<<<<<<< HEAD
+
         character1.gameObject.transform.localPosition = new Vector2(-450, -540);
-=======
+
         character1.gameObject.transform.localPosition = new Vector2(-260, -20);
->>>>>>> parent of 189441f (1)
+
         character2.gameObject.SetActive(true);
         //playerName = PlayerPrefs.GetString("playerName");
         playerName = "еDид";
@@ -173,21 +173,21 @@ public class DialogueManager : MonoBehaviour
                     if (tagValue.CompareTo("Middle") == 0)
                     {
                         speaker.text = playerName;
-<<<<<<< HEAD
+
                         character1.gameObject.transform.localPosition = new Vector2(0, -540);
-=======
+
                         character1.gameObject.transform.localPosition = new Vector2(0, -20);
->>>>>>> parent of 189441f (1)
+
                         character2.gameObject.SetActive(false);
 
                     }
                     else
                     {
-<<<<<<< HEAD
+
                         character1.gameObject.transform.localPosition = new Vector2(-450, -540);
-=======
+
                         character1.gameObject.transform.position = new Vector2(-260, -20);
->>>>>>> parent of 189441f (1)
+
                         character2.gameObject.SetActive(true);
                     }
                     break;
